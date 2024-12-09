@@ -1,0 +1,107 @@
+$backgroundlight: #FFFFFF;
+$backgrounddark: #282C34;
+$workspacesbackground1: #FFFFFF;
+$workspacesbackground2: #CCCCCC;
+$bordercolor: #FFFFFF;
+$textcolor1: #000000;
+$textcolor2: #ABB2BF;
+$textcolor3: #282C34;
+$iconcolor: #FFFFFF;
+
+
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+// $theme_fg_color: "@theme_fg_color";
+$theme_bg_color: "@theme_bg_color";
+
+window.Bar {
+    background: transparent;
+    color: #{$theme_bg_color};
+    font-family:  "Font Awesome 6 Free", "Fira Sans Light", 'Roboto' ;
+    font-size: 12px;
+    font-weight: lighter;
+
+
+   >centerbox {
+        background: transparent;
+        border-radius: 10px;
+        margin: 8px;
+    }}
+    button {
+        border-radius: 8px;
+        margin: 2px;
+        border-radius: 25px;
+        padding: 2px 10px 0px 10px;
+        background: $backgrounddark;
+        border-color: transparent;
+        box-shadow: none;
+        color: $textcolor2;
+    }
+
+    // MENU //////////////
+    
+    .ArchLogo {
+        font-family: "FiraCode Nerd Font", "DejaVu Sans Mono", monospace;
+        font-size: 22px; /* Tamanho do logo */
+        background: transparent;
+        color: #FFFFFF;
+        box-shadow: none;
+        border: 0;
+    }
+
+
+    .Terminal {
+        font-size: 28px;
+        color: #FFFFFF;
+        background: transparent;
+    }
+
+    // WORKSPACES ////////////////////
+
+    .Workspaces {
+        margin: 5px 1px 3px 1px;
+        padding: 0px 1px;
+        border-radius: 12px;
+        border: 0px;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 12px;
+        color: #282C34;
+        min-width: 40px;
+        background: transparent;
+        // $textcolor1;
+    }
+
+    .Workspaces button {
+        padding: 0px 5px;
+        margin: 4px 3px;
+        box-shadow: none;
+        border-width: 0;
+        color: $textcolor2;
+        background: transparent;
+        border-color: #000000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .Workspaces .focused {
+        color: $textcolor1;
+        background: $workspacesbackground2;
+        border-radius: 15px;
+        min-width: 40px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .Workspaces button:hover {
+        color: $textcolor1;
+        background: $workspacesbackground2;
+        border-radius: 15px;
+    }
+
+
+
+    // CLOCK ////////////////
+
+    .Time {
+        padding: 1px 0px;
+        
+        // margin: 10px 15px 3px 0px;
+    }
