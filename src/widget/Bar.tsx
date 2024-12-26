@@ -2,10 +2,14 @@ import { App, Astal, Gtk, Gdk } from "astal/gtk3"
 import GLib from "gi://GLib";
 import { Variable } from "astal"
 import Workspaces from "./Workspaces"
-import BatteryPercentage from "./Battery"
-import Clock from "./Clock"
-import Wifi from "./Wifi"
+import BatteryPercentage from "./battery/Battery"
+import Clock from "./clock/Clock"
+import Wifi from "./network/Wifi"
 import Systray from "./Systray"
+import Volume from "./Audio/Volume";
+import { BluetoothHeader } from "./bluetooth/header";
+import Bluetooth from "./bluetooth";
+import Spotify from "./spotify";
 
 const time = Variable("").poll(1000, "date")
 
@@ -41,6 +45,17 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                         className="ArchLogo">  
                         <label label="󰣇" />
                     </button>
+
+                    <button
+                        halign={Gtk.Align.START}
+                        onClick={() => Run(["kitty"])}
+                        tooltipText="Abrir Terminal"
+                        className="Terminal">
+                        <label label="" /> {/* FontAwesome ou outro ícone */}
+                    </button>
+
+                    <Spotify/>
+
                 </box>
 
                 {/* Seção central */}
@@ -51,29 +66,29 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                 {/* Seção à direita */}
                 <box halign={Gtk.Align.END} spacing={10}>
                     {/* Botão de Terminal */}
-                    <button
-                        onClick={() => Run(["kitty"])}
-                        tooltipText="Abrir Terminal"
-                        className="Terminal">
-                        <label label="" /> {/* FontAwesome ou outro ícone */}
-                    </button>
 
 
                     {/* Relógio */}
-                    <button halign={Gtk.Align.CENTER}>
-                        <Clock/>
-                    </button>
+                    {/* <box halign={Gtk.Align.CENTER}> */}
+                        <Clock />
+                    {/* </box> */}
 
                     <Wifi/>
 
                     <BatteryPercentage/>
 
                     {/* Ícone de Volume */}
-                    <button
-                        onClick={() => Run(["pavucontrol"])}
-                        tooltipText="Abrir Configuração de Áudio">
-                        <label label="🔊" />
-                    </button>
+                    <box className="Volume">
+                        <button
+                            onClick={() => Run(["pavucontrol"])}
+                            tooltipText="Abrir Configuração de Áudio">
+                            <label label="󰕾" />
+                        </button>
+                    </box>
+                    {/*<Volume/> */}
+
+                    <BluetoothHeader/>
+                    <Bluetooth/>
 
                     <Systray/>
                 </box>
