@@ -55,6 +55,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                     </button>
 
                     <Spotify/>
+                    
+                    <BluetoothHeader/>
 
                 </box>
 
@@ -87,10 +89,9 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                     </box>
                     {/*<Volume/> */}
 
-                    <BluetoothHeader/>
                     <Bluetooth/>
 
-                    <Systray/>
+                    {/* <Systray/> */}
                 </box>
             </centerbox>
         </window>

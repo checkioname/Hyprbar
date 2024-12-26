@@ -62,8 +62,10 @@ window.Bar {
         // padding-top: 8px;
     }
 
-    .bluetooth-menu-label {
+    .menu-label-container{
         font-size: 22px;
+        color: #FFFFFF;
+        background: transparent;
     }
 
     .Spotify {
@@ -138,4 +140,6 @@ window.Bar {
 
     .Volume {
         background: $backgrounddark;
+        padding: 0;
+        font-size: 18px;
     }

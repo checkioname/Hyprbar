@@ -7,9 +7,12 @@ export const BluetoothHeader = (): JSX.Element => {
     };
 
     return (
-        <box className="menu-label-container" halign={Gtk.Align.FILL} valign={Gtk.Align.START}>
+        <button className="menu-label-container" 
+            // halign={Gtk.Align.FILL} 
+            // valign={Gtk.Align.START}
+            >
             <MenuLabel />
             {/* <Controls /> */}
-        </box>
+        </button>
     );
 };
