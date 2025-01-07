@@ -58,6 +58,14 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                     
                     <BluetoothHeader/>
 
+
+                    <button
+                          halign={Gtk.Align.START}
+                          onClick={() => Run(["go run pomotimer.go -t=40 -r=5"])}
+                          tooltipText="Abrir Terminal"
+                          className="Terminal">
+                        <label label="" /> {/* FontAwesome ou outro ícone */}
+
                 </box>
 
                 {/* Seção central */}
