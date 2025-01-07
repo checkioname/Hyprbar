@@ -44,12 +44,17 @@ window.Bar {
     }
 
     // MENU //////////////
+
+
+    .Icons {
+        background: transparent;
+        color: #FFFFFF;
+    }
+
     
     .ArchLogo {
         font-family: "FiraCode Nerd Font", "DejaVu Sans Mono", monospace;
         font-size: 22px; /* Tamanho do logo */
-        background: transparent;
-        color: #FFFFFF;
         box-shadow: none;
         border: 0;
     }
@@ -57,22 +62,25 @@ window.Bar {
 
     .Terminal {
         font-size: 28px;
-        color: #FFFFFF;
-        background: transparent;
         // padding-top: 8px;
     }
 
     .menu-label-container{
         font-size: 22px;
-        color: #FFFFFF;
-        background: transparent;
     }
 
     .Spotify {
         font-size: 22px;
-        color: #FFFFFF;
-        background: transparent;
     }
+
+    .PomoTimer {
+        font-size: 28px;
+        box-shadow: none;
+        border: 0;
+        padding: 0
+    }
+
+
 
     // WORKSPACES ////////////////////
 

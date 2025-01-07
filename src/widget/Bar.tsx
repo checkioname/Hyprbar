@@ -42,7 +42,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                     <button
                         halign={Gtk.Align.START}
                         onClicked="echo 'Menu clicked!'"
-                        className="ArchLogo">  
+                        className="ArchLogo Icons">  
                         <label label="󰣇" />
                     </button>
 
@@ -50,7 +50,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                         halign={Gtk.Align.START}
                         onClick={() => Run(["kitty"])}
                         tooltipText="Abrir Terminal"
-                        className="Terminal">
+                        className="Terminal Icons">
                         <label label="" /> {/* FontAwesome ou outro ícone */}
                     </button>
 
@@ -63,8 +63,9 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                           halign={Gtk.Align.START}
                           onClick={() => Run(["go run pomotimer.go -t=40 -r=5"])}
                           tooltipText="Abrir Terminal"
-                          className="Terminal">
+                          className="PomoTimer Icons">
                         <label label="" /> {/* FontAwesome ou outro ícone */}
+                    </button>,
 
                 </box>
 

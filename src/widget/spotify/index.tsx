@@ -14,7 +14,7 @@ var Run = (programs: string[]) => {
 export default (): JSX.Element => {
     return (
         
-            <button className="Spotify"
+            <button className="Spotify Icons"
                 onClick={() => Run(["spotify"])}
                 tooltipText="Abrir Configuração de Áudio">
                 <label label="󰓇" />
